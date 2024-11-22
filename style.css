@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #edebebf6;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*O container engloba toda a nossa aplicação*/
+.container {
+  background-color: #fafafa;
+  border-radius: 14px;
+  margin: 14px;
+  max-width: 600px; /*Se a tela estiver maior, ele não irá passar de 600px*/
+  width: 100%; /*Se a tela estiver menor ele vai usar "%" a largura vai se 100% do que ele conseguir mas no máximo 600px */
+  box-shadow: rgba(0, 0, 0, 0.5);
+  overflow: hidden; /*Tudo que estiver passando do nosso container ele vai esconder*/
+  padding: 0px;
+}
+
+.header {
+  background: linear-gradient(
+    120deg,
+    rgb(24, 92, 151) 0%,
+    rgb(79, 151, 213) 100%
+  );
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.form {
+  padding: 18px;
+}
+
+.form-content {
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label {
+  /*Pedindo pro form-content acessar o label*/
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form-content input {
+  /*Pedindo pro form-content acessar o input*/
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #edebebf6;
+}
+
+.form-content a {
+  /*Pedindo pro form-content acessar o a*/
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color: rgb(24, 92, 151); /*Pedindo pro form acessar o button*/
+  color: #fff;
+  width: 100%;
+  border-radius: 14px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+/*Essas classes são acessadas apenas quando for necessário exibir um erro ao usuário*/
+.form-content.error input {
+  /*Dentro dessa classe vamos manipular o input*/
+  border-color: #ff3b25;
+}
+
+.form-content.error a {
+  /*Dentro dessa classe vamos manipular o a*/
+  color: #ff3b25;
+  visibility: visible;
+}
